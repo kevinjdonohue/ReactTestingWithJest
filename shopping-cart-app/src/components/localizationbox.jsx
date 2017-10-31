@@ -3,8 +3,12 @@ import Dispatcher from './../dispatcher';
 
 class LocalizationBox extends React.Component {
 
-    handleCountryChanged() {
-
+    handleCountryChanged({target:{value}}) {
+        this.setState({country:{value}});
+        dispatcher.dispatch({
+            type: "locale.change",
+            country: value
+        });
     }
 
     getInitialState() {

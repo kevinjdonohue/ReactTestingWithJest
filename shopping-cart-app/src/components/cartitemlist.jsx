@@ -1,5 +1,5 @@
 import React from 'react';
-import CartItem from './cartitem';
+import CartItem from './CartItem';
 
 class CartItemList extends React.Component {
     render() {
